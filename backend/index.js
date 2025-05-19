@@ -61,7 +61,7 @@ app.post('/api/chat', async (req, res) => {
         }))
     ];
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4',
+      model: 'gpt-4-1106-preview',
       messages: openaiMessages,
       temperature: 0.2,
       max_tokens: 1000
@@ -88,7 +88,7 @@ app.post('/api/summary', async (req, res) => {
         }))
     ];
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4',
+      model: 'gpt-4-1106-preview',
       messages: openaiMessages,
       temperature: 0.2,
       max_tokens: 800
